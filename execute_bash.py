@@ -13,3 +13,6 @@ def criar_venv():
     
 def abrir_projeto_vscode(path_full_novo_projeto):
     subprocess.run(f'''code {path_full_novo_projeto}''', shell=True, check=True, executable='/bin/bash')
+    
+def instalar_tkinter():
+    subprocess.run(f'''sudo apt-get install python3-tk -y''', shell=True, check=True, executable='/bin/bash')
