@@ -16,3 +16,12 @@ def abrir_projeto_vscode(path_full_novo_projeto):
     
 def instalar_tkinter():
     subprocess.run(f'''sudo apt-get install python3-tk -y''', shell=True, check=True, executable='/bin/bash')
+    
+def instala_node_20():
+    subprocess.run(f'''curl -sL https://deb.nodesource.com/setup_20.x -o /tmp/nodesource_setup.sh''', shell=True, check=True, executable='/bin/bash')
+    subprocess.run(f'''sudo bash /tmp/nodesource_setup.sh''', shell=True, check=True, executable='/bin/bash')
+    subprocess.run(f'''sudo apt install nodejs -y''', shell=True, check=True, executable='/bin/bash')
+    
+def cria_projeto_react(dir_novo_projeto):
+    # CRIA UM PROJETO EM REACT
+    subprocess.run(f'''npx create-react-app {dir_novo_projeto} --template typescript''', shell=True, check=True, executable='/bin/bash')
