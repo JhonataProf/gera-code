@@ -33,6 +33,7 @@ go_to(path_full_new_project)
 selected_project = select_project()
 
 if selected_project == "Python":
+    checks_files(path_full_new_project)
     install_pip()
     creat_virtual_venv()
     user_option = options()
